@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "#/os-rgbi/v1.0.0/schema.json",
+    "$id": "https://raw.githubusercontent.com/SpatialDays/sd-stac-extensions/main/os-rgbi/v1.0.0/schema.json",
     "title": "Ordnance Survey RGB Extension",
     "description": "Ordnance Survey RGB Extension to STAC Items and Collections",
     "allOf": [
@@ -55,7 +55,7 @@
                 "stac_extensions": {
                     "type": "array",
                     "contains": {
-                        "const": "#/os-rgbi/v1.0.0/schema.json"
+                        "const": "https://raw.githubusercontent.com/SpatialDays/sd-stac-extensions/main/os-rgbi/v1.0.0/schema.json"
                     }
                 }
             }
