@@ -1,0 +1,107 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "#/os-rgbi/v1.0.0/schema.json",
+    "title": "Ordnance Survey RGB Extension",
+    "description": "Ordnance Survey RGB Extension to STAC Items and Collections",
+    "allOf": [
+        {
+            "type": "object",
+            "required": [
+                "type",
+                "properties",
+                "assets"
+            ],
+            "properties": {
+                "type": {
+                    "const": "Feature"
+                },
+                "collection": {
+                    "type": "string"
+                },
+                "properties": {
+                    "allOf": [
+                        {
+                            "required": [
+                                "os:metadata_date",
+                                "os:update_trigger",
+                                "os:acquired_by",
+                                "os:flying_block",
+                                "os:imagery_type",
+                                "os:tile_number",
+                                "os:tile_count",
+                                "os:lens_focal_length",
+                                "os:nominal_flying_height",
+                                "os:imagery_control_method"
+                            ]
+                        },
+                        {
+                            "$ref": "#/definitions/fields"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "$ref": "#/definitions/stac_extensions"
+        }
+    ],
+    "definitions": {
+        "stac_extensions": {
+            "type": "object",
+            "required": [
+                "stac_extensions"
+            ],
+            "properties": {
+                "stac_extensions": {
+                    "type": "array",
+                    "contains": {
+                        "const": "#/os-rgbi/v1.0.0/schema.json"
+                    }
+                }
+            }
+        },
+        "fields": {
+            "os:metadata_date": {
+                "title": "Metadata Date",
+                "type": "string",
+                "format": "date-time"
+            },
+            "os:update_trigger": {
+                "title": "Update Trigger",
+                "type": "string"
+            },
+            "os:acquired_by": {
+                "title": "Acquired By",
+                "type": "string"
+            },
+            "os:flying_block": {
+                "title": "Flying Block",
+                "type": "string"
+            },
+            "os:imagery_type": {
+                "title": "Imagery Type",
+                "type": "string"
+            },
+            "os:tile_number": {
+                "title": "Tile Number",
+                "type": "integer"
+            },
+            "os:tile_count": {
+                "title": "Tile Count",
+                "type": "integer"
+            },
+            "os:lens_focal_length": {
+                "title": "Lens Focal Length",
+                "type": "number"
+            },
+            "os:nominal_flying_height": {
+                "title": "Nominal Flying Height",
+                "type": "number"
+            },
+            "os:imagery_control_method": {
+                "title": "Imagery Control Method",
+                "type": "string"
+            }
+        }
+    }
+}
