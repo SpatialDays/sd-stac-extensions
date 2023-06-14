@@ -22,16 +22,16 @@
                     "allOf": [
                         {
                             "required": [
-                                "os:metadata_date",
-                                "os:update_trigger",
-                                "os:acquired_by",
-                                "os:flying_block",
-                                "os:imagery_type",
-                                "os:tile_number",
-                                "os:tile_count",
-                                "os:lens_focal_length",
-                                "os:nominal_flying_height",
-                                "os:imagery_control_method"
+                                "os-rgbi:metadata_date",
+                                "os-rgbi:update_trigger",
+                                "os-rgbi:acquired_by",
+                                "os-rgbi:flying_block",
+                                "os-rgbi:imagery_type",
+                                "os-rgbi:tile_number",
+                                "os-rgbi:tile_count",
+                                "os-rgbi:lens_focal_length",
+                                "os-rgbi:nominal_flying_height",
+                                "os-rgbi:imagery_control_method"
                             ]
                         },
                         {
@@ -61,44 +61,44 @@
             }
         },
         "fields": {
-            "os:metadata_date": {
+            "os-rgbi:metadata_date": {
                 "title": "Metadata Date",
                 "type": "string",
                 "format": "date-time"
             },
-            "os:update_trigger": {
+            "os-rgbi:update_trigger": {
                 "title": "Update Trigger",
                 "type": "string"
             },
-            "os:acquired_by": {
+            "os-rgbi:acquired_by": {
                 "title": "Acquired By",
                 "type": "string"
             },
-            "os:flying_block": {
+            "os-rgbi:flying_block": {
                 "title": "Flying Block",
                 "type": "string"
             },
-            "os:imagery_type": {
+            "os-rgbi:imagery_type": {
                 "title": "Imagery Type",
                 "type": "string"
             },
-            "os:tile_number": {
+            "os-rgbi:tile_number": {
                 "title": "Tile Number",
                 "type": "integer"
             },
-            "os:tile_count": {
+            "os-rgbi:tile_count": {
                 "title": "Tile Count",
                 "type": "integer"
             },
-            "os:lens_focal_length": {
+            "os-rgbi:lens_focal_length": {
                 "title": "Lens Focal Length",
                 "type": "number"
             },
-            "os:nominal_flying_height": {
+            "os-rgbi:nominal_flying_height": {
                 "title": "Nominal Flying Height",
                 "type": "number"
             },
-            "os:imagery_control_method": {
+            "os-rgbi:imagery_control_method": {
                 "title": "Imagery Control Method",
                 "type": "string"
             }
