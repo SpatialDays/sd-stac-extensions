@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/SpatialDays/sd-stac-extensions/main/stac-portal-metadata/v0.0.1/schema.json",
+    "title": "STAC Portal Metadata Extension",
+    "description": "A custom extension adding a 'stac-portal-metadata' object field to a STAC Collection",
+    "allOf": [
+        {
+            "$ref": "https://schemas.stacspec.org/v1.0.0/collection-spec/json-schema/collection.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "stac-portal-metadata": {
+                    "type": "object",
+                    "properties": {
+                        "type-of-collection": {
+                            "type": "string",
+                            "enum": ["public", "private", "bulk-upload-system"],
+                            "description": "A field indicating the type of the collection"
+                        }
+                    },
+                    "required": ["type-of-collection"],
+                    "additionalProperties": true
+                }
+            },
+            "additionalProperties": true,
+            "required": [
+                "stac-portal-metadata"
+            ]
+        }
+    ]
+}
