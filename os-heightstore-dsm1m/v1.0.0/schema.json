@@ -26,7 +26,6 @@
                                 "os-heightstore-dsm1m:submitted-date",
                                 "os-heightstore-dsm1m:original_metadata_location",
                                 "os-heightstore-dsm1m:version"
-
                             ]
                         },
                         {
@@ -71,7 +70,7 @@
                 "type" : "string"
             },
             "os-heightstore-dsm1m:version": {
-                "title" : "Original metadata location",
+                "title" : "version",
                 "type" : "string"
             }
 
