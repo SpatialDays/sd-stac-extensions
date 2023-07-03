@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/SpatialDays/sd-stac-extensions/main/bulk-upload-system-metadata/v1.0.0/schema.json",
+    "title": "Bulk Upload System Metadata Extension",
+    "description": "Bulk Upload System Metadata Extension",
+    "allOf": [
+        {
+            "type": "object",
+            "required": [
+                "type",
+                "properties",
+                "assets"
+            ],
+            "properties": {
+                "type": {
+                    "const": "Feature"
+                },
+                "collection": {
+                    "type": "string"
+                },
+                "properties": {
+                    "allOf": [
+                        {
+                            "required": [
+                                "bulk-upload-system-metadata:original_metadata_location"
+                            ]
+                        },
+                        {
+                            "$ref": "#/definitions/fields"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "$ref": "#/definitions/stac_extensions"
+        }
+    ],
+    "definitions": {
+        "stac_extensions": {
+            "type": "object",
+            "required": [
+                "stac_extensions"
+            ],
+            "properties": {
+                "stac_extensions": {
+                    "type": "array",
+                    "contains": {
+                        "const": "https://raw.githubusercontent.com/SpatialDays/sd-stac-extensions/main/bulk-upload-system-metadata/v1.0.0/schema.json"
+                    }
+                }
+            }
+        },
+        "fields": {
+            "bulk-upload-system-metadata:original_metadata_location": {
+                "title" : "Original metadata location",
+                "type" : "string"
+            }
+        }
+    }
+}
