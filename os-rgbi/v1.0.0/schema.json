@@ -31,8 +31,7 @@
                                 "os-rgbi:tile_count",
                                 "os-rgbi:lens_focal_length",
                                 "os-rgbi:nominal_flying_height",
-                                "os-rgbi:imagery_control_method",
-                                "os-rgbi:original_metadata_location"
+                                "os-rgbi:imagery_control_method"
                             ]
                         },
                         {
@@ -102,10 +101,6 @@
             "os-rgbi:imagery_control_method": {
                 "title": "Imagery Control Method",
                 "type": "string"
-            },
-            "os-rgbi:original_metadata_location": {
-                "title" : "Original metadata location",
-                "type" : "string"
             }
         }
     }
