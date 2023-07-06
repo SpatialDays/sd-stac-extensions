@@ -17,6 +17,10 @@
                             "type": "string",
                             "enum": ["public", "private", "bulk-upload-system"],
                             "description": "A field indicating the type of the collection"
+                        },
+                        "is-authoritative": {
+                            "type": "boolean",
+                            "description": "A field indicating whether the collection is authoritative"
                         }
                     },
                     "required": ["type-of-collection"],
