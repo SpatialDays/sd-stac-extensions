@@ -1,0 +1,108 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/SpatialDays/sd-stac-extensions/main/os-heightstore-dtm1m/v1.0.0/schema.json",
+    "title": "Ordnance Survey os-heightstore-dtm1m Extension",
+    "description": "Ordnance Survey os-heightstore-dtm1m Extension",
+    "allOf": [
+      {
+        "type": "object",
+        "required": ["type", "properties", "assets"],
+        "properties": {
+          "type": {
+            "const": "Feature"
+          },
+          "collection": {
+            "type": "string"
+          },
+          "properties": {
+            "allOf": [
+              {
+                "required": [
+                  "os-heightstore-dtm1m:idem",
+                  "os-heightstore-dtm1m:tile-reference",
+                  "os-heightstore-dtm1m:update-date",
+                  "os-heightstore-dtm1m:earliest-flight-date",
+                  "os-heightstore-dtm1m:latest-flight-date",
+                  "os-heightstore-dtm1m:dtm-grid-id",
+                  "os-heightstore-dtm1m:grid-app-version",
+                  "os-heightstore-dtm1m:change-cache-url",
+                  "os-heightstore-dtm1m:dtm-base-change-event-id",
+                  "os-heightstore-dtm1m:version"
+                ]
+              },
+              {
+                "$ref": "#/definitions/fields"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "$ref": "#/definitions/stac_extensions"
+      }
+    ],
+    "definitions": {
+      "stac_extensions": {
+        "type": "object",
+        "required": ["stac_extensions"],
+        "properties": {
+          "stac_extensions": {
+            "type": "array",
+            "contains": {
+              "const": "https://raw.githubusercontent.com/SpatialDays/sd-stac-extensions/main/os-heightstore-dtm1m/v1.0.0/schema.json"
+            }
+          }
+        }
+      },
+      "fields": {
+        "os-heightstore-dtm1m:idem": {
+          "title": "Idem",
+          "type": "string",
+          "format": "uuid"
+        },
+        "os-heightstore-dtm1m:tile-reference": {
+          "title": "Tile Reference",
+          "type": "string"
+        },
+        "os-heightstore-dtm1m:update-date": {
+          "title": "Update Date",
+          "type": "string",
+          "format": "date-time"
+        },
+        "os-heightstore-dtm1m:earliest-flight-date": {
+          "title": "Earliest Flight Date",
+          "type": "string",
+          "format": "date-time"
+        },
+        "os-heightstore-dtm1m:latest-flight-date": {
+          "title": "Latest Flight Date",
+          "type": "string",
+          "format": "date-time"
+        },
+        "os-heightstore-dtm1m:dtm-grid-id": {
+          "title": "DTM Grid ID",
+          "type": "string",
+          "format": "uuid"
+        },
+        "os-heightstore-dtm1m:grid-app-version": {
+          "title": "Grid App Version",
+          "type": "string"
+        },
+        "os-heightstore-dtm1m:change-cache-url": {
+          "title": "Change Cache URL",
+          "type": "string",
+          "format": "url"
+        },
+        "os-heightstore-dtm1m:dtm-base-change-event-id": {
+          "title": "DTM Base Change Event ID",
+          "type": ["string", "null"],
+          "format": "uuid"
+        },
+        "os-heightstore-dtm1m:version": {
+          "title": "Version",
+          "type": "string"
+        }
+      }
+    }
+  }
+  

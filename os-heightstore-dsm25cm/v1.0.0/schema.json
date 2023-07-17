@@ -24,7 +24,6 @@
                             "required": [
                                 "os-heightstore-dsm25cm:flight-date",
                                 "os-heightstore-dsm25cm:submitted-date",
-                                "os-heightstore-dsm25cm:original_metadata_location",
                                 "os-heightstore-dsm25cm:version"
                             ]
                         },
@@ -64,10 +63,6 @@
                 "title": "Metadata Date",
                 "type": "string",
                 "format": "date-time"
-            },
-            "os-heightstore-dsm25cm:original_metadata_location": {
-                "title" : "Original metadata location",
-                "type" : "string"
             },
             "os-heightstore-dsm25cm:version": {
                 "title" : "version",
