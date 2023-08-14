@@ -1,0 +1,79 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/SpatialDays/sd-stac-extensions/main/os-heightstore-dsm25cm/v1.0.1/schema.json",
+    "title": "Ordnance Survey os-heightstore-dsm25cm Extension",
+    "description": "Ordnance Survey os-heightstore-dsm25cm Extension",
+    "allOf": [
+        {
+            "type": "object",
+            "required": [
+                "type",
+                "properties",
+                "assets"
+            ],
+            "properties": {
+                "type": {
+                    "const": "Feature"
+                },
+                "collection": {
+                    "type": "string"
+                },
+                "properties": {
+                    "allOf": [
+                        {
+                            "required": [
+                                "os-heightstore-dsm25cm:flight-date",
+                                "os-heightstore-dsm25cm:flying_block",
+                                "os-heightstore-dsm25cm:submitted-date",
+                                "os-heightstore-dsm25cm:version"
+                            ]
+                        },
+                        {
+                            "$ref": "#/definitions/fields"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "$ref": "#/definitions/stac_extensions"
+        }
+    ],
+    "definitions": {
+        "stac_extensions": {
+            "type": "object",
+            "required": [
+                "stac_extensions"
+            ],
+            "properties": {
+                "stac_extensions": {
+                    "type": "array",
+                    "contains": {
+                        "const": "https://raw.githubusercontent.com/SpatialDays/sd-stac-extensions/main/os-heightstore-dsm25cm/v1.0.1/schema.json"
+                    }
+                }
+            }
+        },
+        "fields": {
+            "os-heightstore-dsm25cm:flying_block": {
+                "title": "Flying Block",
+                "type": "string"
+            },
+            "os-heightstore-dsm25cm:flight-date": {
+                "title": "Metadata Date",
+                "type": "string",
+                "format": "date-time"
+            },
+            "os-heightstore-dsm25cm:submitted-date": {
+                "title": "Metadata Date",
+                "type": "string",
+                "format": "date-time"
+            },
+            "os-heightstore-dsm25cm:version": {
+                "title" : "version",
+                "type" : "string"
+            }
+
+        }
+    }
+}
