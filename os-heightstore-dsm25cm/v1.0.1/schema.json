@@ -23,7 +23,7 @@
                         {
                             "required": [
                                 "os-heightstore-dsm25cm:flight-date",
-                                "os-heightstore-dsm25cm:flying_block",
+                                "os-heightstore-dsm25cm:flying-block",
                                 "os-heightstore-dsm25cm:submitted-date",
                                 "os-heightstore-dsm25cm:version"
                             ]
@@ -55,7 +55,7 @@
             }
         },
         "fields": {
-            "os-heightstore-dsm25cm:flying_block": {
+            "os-heightstore-dsm25cm:flying-block": {
                 "title": "Flying Block",
                 "type": "string"
             },

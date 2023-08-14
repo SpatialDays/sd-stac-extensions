@@ -22,17 +22,17 @@
                     "allOf": [
                         {
                             "required": [
-                                "os-rgbi:metadata_date",
-                                "os-rgbi:update_trigger",
-                                "os-rgbi:acquired_by",
-                                "os-rgbi:flying_block",
-                                "os-rgbi:imagery_type",
-                                "os-rgbi:tile_number",
-                                "os-rgbi:tile_count",
-                                "os-rgbi:tile_reference",
-                                "os-rgbi:lens_focal_length",
-                                "os-rgbi:nominal_flying_height",
-                                "os-rgbi:imagery_control_method"
+                                "os-rgbi:metadata-date",
+                                "os-rgbi:update-trigger",
+                                "os-rgbi:acquired-by",
+                                "os-rgbi:flying-block",
+                                "os-rgbi:imagery-type",
+                                "os-rgbi:tile-number",
+                                "os-rgbi:tile-count",
+                                "os-rgbi:tile-reference",
+                                "os-rgbi:lens-focal-length",
+                                "os-rgbi:nominal-flying-height",
+                                "os-rgbi:imagery-control-method"
                             ]
                         },
                         {
@@ -62,48 +62,48 @@
             }
         },
         "fields": {
-            "os-rgbi:metadata_date": {
+            "os-rgbi:metadata-date": {
                 "title": "Metadata Date",
                 "type": "string",
                 "format": "date-time"
             },
-            "os-rgbi:update_trigger": {
+            "os-rgbi:update-trigger": {
                 "title": "Update Trigger",
                 "type": "string"
             },
-            "os-rgbi:acquired_by": {
+            "os-rgbi:acquired-by": {
                 "title": "Acquired By",
                 "type": "string"
             },
-            "os-rgbi:flying_block": {
+            "os-rgbi:flying-block": {
                 "title": "Flying Block",
                 "type": "string"
             },
-            "os-rgbi:imagery_type": {
+            "os-rgbi:imagery-type": {
                 "title": "Imagery Type",
                 "type": "string"
             },
-            "os-rgbi:tile_reference": {
+            "os-rgbi:tile-reference": {
                 "title": "Tile Reference",
                 "type": "string"
             },
-            "os-rgbi:tile_number": {
+            "os-rgbi:tile-number": {
                 "title": "Tile Number",
                 "type": "integer"
             },
-            "os-rgbi:tile_count": {
+            "os-rgbi:tile-count": {
                 "title": "Tile Count",
                 "type": "integer"
             },
-            "os-rgbi:lens_focal_length": {
+            "os-rgbi:lens-focal-length": {
                 "title": "Lens Focal Length",
                 "type": "number"
             },
-            "os-rgbi:nominal_flying_height": {
+            "os-rgbi:nominal-flying-height": {
                 "title": "Nominal Flying Height",
                 "type": "number"
             },
-            "os-rgbi:imagery_control_method": {
+            "os-rgbi:imagery-control-method": {
                 "title": "Imagery Control Method",
                 "type": "string"
             }
