@@ -97,7 +97,7 @@
             },
             "os-rgbi:lens-focal-length": {
                 "title": "Lens Focal Length",
-                "type": "number"
+                "type": "list"
             },
             "os-rgbi:nominal-flying-height": {
                 "title": "Nominal Flying Height",
